@@ -15,6 +15,6 @@ public class NameController {
     public String postReversedName(@RequestParam String name){
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(name);
-        return stringBuilder.reverse().toString();
+        return "il mio nome all'inverso: " + stringBuilder.reverse().toString();
     }
 }
