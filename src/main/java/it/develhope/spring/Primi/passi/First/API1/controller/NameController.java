@@ -6,15 +6,17 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping ("/api")
 public class NameController {
 
-    @GetMapping("/name")
+    @GetMapping("/")
     public String getName(@RequestParam String name){
-        return "il mio nome: " + name;
+        return "Il mio nome: " + name;
     }
 
-    @PostMapping("/name")
+    @PostMapping("/")
     public String postReversedName(@RequestParam String name){
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(name);
-        return "il mio nome all'inverso: " + stringBuilder.reverse().toString();
+        return "Il mio nome all'inverso: " + stringBuilder.reverse().toString();
     }
+
+    // Documentazione Postman: https://documenter.getpostman.com/view/26121086/2s93Xu3RcN
 }
